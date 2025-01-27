@@ -1,6 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.0.2</version>
+    <relativePath/>
+  </parent>
 
   <groupId>com.ByteBlazers</groupId>
   <artifactId>tiktok-mall</artifactId>
@@ -20,33 +29,123 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <common-base.version>1.0-SNAPSHOT</common-base.version>
+    <common-core.version>1.0-SNAPSHOT</common-core.version>
+
+    <bootstrap.version>3.1.1</bootstrap.version>
+    <spring-cloud.version>2022.0.0</spring-cloud.version>
+    <spring-cloud-alibaba.version>2022.0.0.0</spring-cloud-alibaba.version>
+    <mysql.version>8.0.32</mysql.version>
+    <mybatis-plus.version>3.5.3.2</mybatis-plus.version>
+    <spring-web.version>2.6.13</spring-web.version>
+    <hutool-version>5.8.2</hutool-version>
+    <lombok.version>1.18.24</lombok.version>
+    <druid.version>1.2.18</druid.version>
+    <java-jwt.version>4.4.0</java-jwt.version>
+    <aliyun-sdk-oss.version>3.17.4</aliyun-sdk-oss.version>
+    <springfox.version>3.0.0</springfox.version>
+
   </properties>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-bootstrap</artifactId>
+      <version>${bootstrap.version}</version>
+    </dependency>
+  </dependencies>
   <dependencyManagement>
     <dependencies>
-      <!-- springcloud的依赖-->
+      <!--common-base-->
+      <dependency>
+        <groupId>com.ByteBlazers</groupId>
+        <artifactId>common-base</artifactId>
+        <version>${common-base.version}</version>
+      </dependency>
+      <!--common-core-->
+      <dependency>
+        <groupId>com.ByteBlazers</groupId>
+        <artifactId>common-core</artifactId>
+        <version>${common-core.version}</version>
+      </dependency>
+      <!--spring cloud-->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
-        <version>2022.0.0</version>
+        <version>${spring-cloud.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
-      <!--spring-cloud-alibaba-->
+      <!--spring cloud alibaba-->
       <dependency>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-        <version>2022.0.0.0-RC1</version>
+        <version>${spring-cloud-alibaba.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
-      <!-- springboot的依赖-->
+      <!--mysql-connector-j-->
       <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-dependencies</artifactId>
-        <version>3.0.0</version>
+        <groupId>com.mysql</groupId>
+        <artifactId>mysql-connector-j</artifactId>
+        <version>${mysql.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--druid-spring-boot-starter-->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid-spring-boot-starter</artifactId>
+        <version>${druid.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--mybatis-plus-boot-starter-->
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus-boot-starter</artifactId>
+        <version>${mybatis-plus.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--hutool-all-->
+      <dependency>
+        <groupId>cn.hutool</groupId>
+        <artifactId>hutool-all</artifactId>
+        <version>${hutool-version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--java-jwt-->
+      <dependency>
+        <groupId>com.auth0</groupId>
+        <artifactId>java-jwt</artifactId>
+        <version>${java-jwt.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--aliyun-sdk-oss-->
+      <dependency>
+        <groupId>com.aliyun.oss</groupId>
+        <artifactId>aliyun-sdk-oss</artifactId>
+        <version>${aliyun-sdk-oss.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--lombok-->
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--springfox-boot-starter-->
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-boot-starter</artifactId>
+        <version>${springfox.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
