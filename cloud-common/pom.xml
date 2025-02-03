@@ -6,7 +6,6 @@
         <groupId>com.ByteBlazers</groupId>
         <artifactId>tiktok-mall</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>cloud-common</artifactId>

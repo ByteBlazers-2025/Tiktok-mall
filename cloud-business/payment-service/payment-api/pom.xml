@@ -4,24 +4,27 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.ByteBlazers</groupId>
-        <artifactId>tiktok-mall</artifactId>
+        <artifactId>payment-service</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>cloud-business</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>user-service</module>
-        <module>product-service</module>
-        <module>payment-service</module>
-        <module>cart-service</module>
-        <module>checkout-service</module>
-        <module>order-service</module>
-    </modules>
 
-
+    <artifactId>payment-api</artifactId>
+    <name>payment-api</name>
+    <description>payment-api</description>
     <properties>
         <java.version>17</java.version>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
