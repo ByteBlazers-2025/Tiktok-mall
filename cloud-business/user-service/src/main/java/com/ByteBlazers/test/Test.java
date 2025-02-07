@@ -1,5 +1,5 @@
 package com.ByteBlazers.test;
 
-public class TestWorld {
+public class Test {
 
 }
