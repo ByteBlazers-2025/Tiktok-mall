@@ -96,7 +96,7 @@
       <!--druid-spring-boot-starter-->
       <dependency>
         <groupId>com.alibaba</groupId>
-        <artifactId>druid-spring-boot-starter</artifactId>
+        <artifactId>druid-spring-boot-3-starter</artifactId>
         <version>${druid.version}</version>
         <type>pom</type>
         <scope>import</scope>
