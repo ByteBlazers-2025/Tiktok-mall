@@ -4,16 +4,17 @@ package com.byteblazers.paymentcore.config;
 import com.alipay.easysdk.factory.Factory;
 import com.alipay.easysdk.kernel.Config;
 import jakarta.annotation.PostConstruct;
+import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-
+@Data
 @Component
 @ConfigurationProperties(prefix = "alipay")
-public class AplipayConfig {
-    private Logger logger = LoggerFactory.getLogger(AplipayConfig.class);
+public class AliPayConfig {
+    private Logger logger = LoggerFactory.getLogger(AliPayConfig.class);
     private String appId;
     private String appPrivateKey;
     private String alipayPublicKey;
