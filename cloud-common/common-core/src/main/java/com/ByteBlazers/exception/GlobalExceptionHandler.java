@@ -1,7 +1,7 @@
 package com.ByteBlazers.exception;
 
-import com.ByteBlazers.entity.ResEntity;
-import com.ByteBlazers.entity.RespEnum;
+import com.ByteBlazers.res.ResEntity;
+import com.ByteBlazers.res.RespEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;
