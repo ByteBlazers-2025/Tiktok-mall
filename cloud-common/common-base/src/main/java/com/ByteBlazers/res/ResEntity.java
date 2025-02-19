@@ -1,4 +1,4 @@
-package com.ByteBlazers.entity;
+package com.ByteBlazers.res;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.ByteBlazers.entity;
+package com.ByteBlazers.res;
 
 /**
  * 状态码
